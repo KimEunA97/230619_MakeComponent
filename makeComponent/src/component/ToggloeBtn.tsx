@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, Switch, StyleSheet } from 'react-native';
+import { View, Text, Image, Switch, StyleSheet } from 'react-native';
 
-const ToggleButton = () => {
+const SOSToggleBox = () => {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = (value) => {
@@ -10,7 +10,14 @@ const ToggleButton = () => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.switchContainer}>
+      <View style={styles.box}>
+        <Image source={require('../img/siren.png')}
+        />
+        <Text
+          style={styles.sosStyle}
+        >S.O.S 요청</Text>
+
+        {/* Switch 컴포넌트 스타일링 불가입니다,, */}
         <Switch
           value={isToggled}
           onValueChange={handleToggle}
@@ -23,27 +30,28 @@ const ToggleButton = () => {
 };
 
 const styles = StyleSheet.create({
+
+  //컨테이너 정렬
   container: {
     flexDirection: 'row',
+  },
+  //회색 박스
+  box: {
+    flexDirection: "row",
     alignItems: 'center',
-  },
-
-  switchContainer : {
-    width : "90%",
-    backgroundColor : "gray",
-    borderRadius : 10,
-  },
-  circleContainer: {
-    justifyContent: 'center',
-    marginRight: 10,
-  },
-  circle: {
-    width: 20,
-    height: 20,
+    justifyContent: "space-around",
+    width: "90%",
+    padding: 10,
+    backgroundColor: "#9BA4B4",
     borderRadius: 10,
-    backgroundColor: 'gray',
+  },
+  // 구조요청 스타일링
+  sosStyle: {
+    color: "white",
+    fontSize: 25,
+    fontWeight: "bold",
   },
 
 });
 
-export default ToggleButton;
+export default SOSToggleBox;

@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import ToggleButton from './src/component/ToggloeBtn';
+import SOSToggleBox from './src/component/ToggloeBtn';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ToggleButton></ToggleButton>
+      <SOSToggleBox></SOSToggleBox>
     </View>
   );
 }
