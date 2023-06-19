@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import SOSToggleBox from './src/component/ToggloeBtn';
+import SOSToggleBox from './src/component/SOSBox';
 import SobangchaBox from './src/component/sobangchaBox';
 
 export default function App() {
